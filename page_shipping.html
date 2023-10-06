@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+<title>Toy R not Us Website</title>
+</head>
+<style>
+
+p {text-align: left;}
+
+label {text-align: left;}
+
+table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }      
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 25px;
+        }
+
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: menu; }
+.item4 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'menu menu menu menu menu menu'
+    'footer footer footer footer footer footer';
+  gap: 2px;
+  background-color: #f1e9e9;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 12px;
+}
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <p style="font-size:25px;">Shipping Address</p>
+        </div>
+        <div class="item2">
+            <table style="width:100%">
+                <tr>
+            <form action="/action_page.php">
+            <p>Full Name</p>
+            <label for="full_name"></label>
+            <p><input type="text" id="full_name" name="full_name" size="120"></p>
+        
+            <p>Address 1</p>
+            <label for="address01"></label>
+            <p><input type="text" id="address01" name="address01" size="120"></p>
+            
+            <p>Address 2</p>
+            <label for="address02"></label>
+            <p>
+                <input type="text" id="address02" name="address02" size="120">
+            </p>
+        </form>
+        </tr>
+    </table>  
+        </div>  
+        <div class="item3">
+            <table style="width:100%">
+                <tr>
+                  <th>
+                    <label for="city">City</label>
+                    <p><input type="text" id="city" name="city"></p>
+                </th>
+                  <th>
+                    <label for="province">Province</label>
+                    <p><input type="text" id="province" name="province"></p>
+                </th>
+                  <th>
+                    <label for="post_code">Post Code</label>
+                    <p><input type="number" id="post_code" name="post_code"></p>
+                  </th>                 
+                </tr>
+            </table>   
+        </div>
+        <div class="item4">
+            <button>Delivery to this address</button> 
+        </div>
+      </div>
+</body>
+</html>
