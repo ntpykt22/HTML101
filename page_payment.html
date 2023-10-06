@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+<title>Toy R not Us Website</title>
+</head>
+<style>
+
+h3 {text-align: left;}
+p {text-align: left;}
+
+p.order_button {text-align: right;}
+
+p.quantity {text-align: right;}
+
+
+table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }      
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 25px;
+        }
+
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: main; }
+.item3 { grid-area: right; }
+.item4 { grid-area: footer; }
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'header header header header header header'
+    'main main main main right right'
+    'footer footer footer footer footer footer';
+  gap: 2px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(245, 235, 235, 0.8);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 12px;
+}
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <p style="font-size:25px;">Payment Methods</p>
+        </div>
+        <div class="item2">
+            <table style="width:100%">
+                <tr>
+                  <th style="width: 120%;">Items</th>
+                  <th>Quantity</th>
+                  <th>Price(THB)</th>                  
+                </tr>
+                <tr>
+                  <td>
+                    <b>Toy Name</b> By Brand <p class="gender_age">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age</p> <p style="color:red"><b style="font-size:15px;">In Stock/ Out of Stock</b> <p style="color:blue">Delete</p></td>
+                    <th>
+                        <p class="quantity">1</p>
+                    </th>
+                  <td style="text-align:right">100.00</td>
+                </tr>
+                <tr>
+                    <td>
+                      <b>Toy Name</b> By Brand <p class="gender_age">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age</p> <p style="color:red"><b style="font-size:15px;">In Stock/ Out of Stock</b> <p style="color:blue">Delete</p></td>
+                      <th>
+                        <p class="quantity">1</p>
+                    </th>
+                    <td style="text-align:right">100.00</td>
+                  </tr>
+            </table> 
+          </div>  
+        <div class="item3">
+            <h3><b>Order Summary</b></h3>
+            <p>&nbsp;&nbsp;&nbsp;items(2): <b style="color:red">200.00</b> THB</p>
+            <p>&nbsp;&nbsp;&nbsp;Shipping Fee: <b style="color:red">150.00</b> THB</p>
+            <hr>
+            <p><b>Order total:<b style="color:red"> 200.00</b> THB</b></p>
+        </div>
+        <div class="item4">
+            <p>Shiping Method: Kerry Express</p>
+            <br>
+            <p><b>Select payment methods</b></p>
+            <p><b><input type="radio" id="radio1"> 
+                <label for="radio1">Credit or Debit Cards</label></b></p>
+            <p><b><input type="radio" id="radio3"> 
+                <label for="radio3">Paypal</b></p>
+            <p><b><input type="radio" id="radio4"> 
+                <label for="radio4">Line Pay</b></p>        
+        </div>
+      </div>
+      <p class="order_button"><button>Place your order</button></p>
+</body>
+</html>
